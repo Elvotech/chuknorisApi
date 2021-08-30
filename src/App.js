@@ -30,7 +30,7 @@ render() {
       <h3> {this.state.fact} </h3>
       <Button variant = "contained" color = "primary"
         onClick = {this.getFact}>
-        More chuknoris Apis
+        More chuknoris Jokes
       </Button>
     </div>
   );
