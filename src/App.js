@@ -42,8 +42,13 @@ render() {
 
        <Button className = "btn" variant = "contained" color = "primary"
         onClick = {this.getFact}>
+<<<<<<< HEAD
         Generate more jokes
        </Button>
+=======
+        More chuknoris Jokes
+      </Button>
+>>>>>>> 15c6959ec55a3b84fa3f52eb7ec5731ea8fba54b
     </div>
   </div>
   );
