@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
 import axios from 'axios';
 import './App.css';
 
@@ -9,7 +10,7 @@ class App extends React.Component {
   constructor (props) {
   super (props)
   this.state = {
-    fact : 'Chuck Norris can text using his walkie talkie and without batteries.'
+    fact : ''
     };
     this.getFact = this.getFact.bind(this);
  }
@@ -23,16 +24,28 @@ class App extends React.Component {
    });
   }
 
+
 render() {
   return (
     <div className ="container text-center">
       <h1> Chuknorris Jokes</h1>
       <h3> {this.state.fact} </h3>
-      <Button variant = "contained" color = "primary"
+      <div className = "col-6 searchJokeCol">
+      <div className = "card">
+        <div className = "card-header">
+          Search item
+        </div>
+        <div className = "card-body">
+          <Input type = "text"/>
+        </div>
+       </div>
+
+       <Button className = "btn" variant = "contained" color = "primary"
         onClick = {this.getFact}>
-        More chuknoris Apis
-      </Button>
+        Generate more jokes
+       </Button>
     </div>
+  </div>
   );
 }
 }
